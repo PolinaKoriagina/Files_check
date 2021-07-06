@@ -8,6 +8,8 @@ import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -81,5 +83,21 @@ public class Files {
         }
 
         return result;
+    }
+
+    public static String readDocxFile(String fileName) throws IOException {
+
+        File file = new File(fileName);
+
+        FileInputStream fis = new FileInputStream(file.getAbsolutePath());
+
+        XWPFDocument docx = new XWPFDocument(fis);
+
+        XWPFWordExtractor extractor = new XWPFWordExtractor(docx);
+
+        String docsText = extractor.getText();
+
+        return docsText;
+
     }
 }
