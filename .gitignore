@@ -25,6 +25,8 @@
 
 # Project gen files
 .idea
+.downloads
+.gitattributes
 .allure/
 .gradle/
 allure-results/
