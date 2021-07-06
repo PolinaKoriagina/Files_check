@@ -18,7 +18,7 @@ public class ZipFileTests {
         String unzipFolderPath = "./src/test/resources/files/unzip";
         String zipPassword = "";
         String unzipTxtFilePath = "./src/test/resources/files/unzip/1.txt";
-        String expectedData = "hello qa.guru students!";
+        String expectedData = "Лето – это время путешествий и приключений.";
 
         unzip(zipFilePath, unzipFolderPath, zipPassword);
 
@@ -32,7 +32,7 @@ public class ZipFileTests {
         String zipFilePath = "./src/test/resources/files/1.zip";
         String unzipFolderPath = "./src/test/resources/files/unzip";
         String unzipTxtFilePath = "./src/test/resources/files/unzip/1.txt";
-        String expectedData = "hello qa.guru students!";
+        String expectedData = "Лето – это время путешествий и приключений.";
 
         unzip(zipFilePath, unzipFolderPath);
 
