@@ -29,7 +29,7 @@ public class DownloadFileTests {
         String fileContent = Files.readTextFromFile(downloadedFile);
 
 //        assertTrue(fileContent.contains("Selenide = 1UI Testing Framework powered by Selenium WebDriver"));
-        assertThat(fileContent, containsString("Selenide = 1UI Testing Framework powered by Selenium WebDriver"));
+        assertThat(fileContent, containsString("Selenide = UI Testing Framework powered by Selenium WebDriver"));
     }
 
     @Test
